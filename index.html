@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background:#2C3E50">
+    <div id='container'>
+        <div class="controls">
+            <input type="number" class="mag" name="mag" value="6" placeholder="Magnitude">
+            <input type="text" class="startdate" name="startdate" value="2021-12-01" placeholder="Start date">
+            <input type="text" class="enddate" name="enddate" value="2022-02-01" placeholder="End date">
+            <button>Change</button>
+        </div>
+        <div class="loader loading">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#fff">
+                <g fill="none" fill-rule="evenodd">
+                    <g transform="translate(1 1)" stroke-width="2">
+                        <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                            <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div id="items">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        div {
+            color: white;
+        }
+
+        .controls {
+            margin-bottom: 40px;
+        }
+
+        #container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .item {
+            width: 80%;
+            min-width: 600px;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .loader {
+            position: absolute;
+            transition: all 0.5s;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            height: 0;
+            width: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #2C3E50;
+        }
+
+        .loader.loading {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</body>
+</html>
